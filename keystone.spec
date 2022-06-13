@@ -12,7 +12,7 @@
 %global         gitversion      .git%{shortcommit}
 %if "%{commit}" != "%{latest}"
 %global         commit          %(/usr/bin/git ls-remote https://github.com/keystone-engine/keystone.git HEAD | cut -f1)
-%global         archive         %(c=%{commit}; curl -L https://api.github.com/repos/keystone-engine/keystone/tarball/$c > "SOUCES/keystone-${c:0:7}.tar.gz")
+%global         archive         %(c=%{commit}; curl -L https://api.github.com/repos/keystone-engine/keystone/tarball/$c > "SOURCES/keystone-${c:0:7}.tar.gz")
 %global         shortcommit     %(c=%{commit}; echo ${c:0:7})
 %global         commitdate      %(date '+%Y%m%d')
 %global         gitversion      .git%{shortcommit}
